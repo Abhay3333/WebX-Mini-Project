@@ -16,10 +16,10 @@ const sendFeedbackEmail = async(feedbackData) => {
         subject: 'Feedback Submission',
         html: `
             <h1>Feedback Details</h1>
-            <p><strong>Question 1:</strong> ${feedbackData.question1}</p>
-            <p><strong>Question 2:</strong> ${feedbackData.question2}</p>
-            <p><strong>Question 3:</strong> ${feedbackData.question3}</p>
-            <p><strong>Question 4:</strong> ${feedbackData.question4}</p>
+            <p><strong>Rate College Infrastructure:</strong> ${feedbackData.question1}</p>
+            <p><strong>Rate Education Quality:</strong> ${feedbackData.question2}</p>
+            <p><strong>Rate College Placement:</strong> ${feedbackData.question3}</p>
+            <p><strong>Rate College Canteen:</strong> ${feedbackData.question4}</p>
             <p><strong>Additional Feedback:</strong> ${feedbackData.additionalFeedback}</p>
         `
     };
