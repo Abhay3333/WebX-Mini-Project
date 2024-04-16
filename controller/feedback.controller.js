@@ -36,3 +36,30 @@ exports.submitFeedback = async(req, res) => {
         res.status(500).json({ error: 'Internal server error' });
     }
 };
+
+
+exports.getFeedbacks = async(req, res) => {
+    try {
+        const feedbacks = await Feedback.find();
+        res.status(200).json(feedbacks);
+    } catch (error) {
+        console.error('Error getting feedbacks:', error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+};
+
+exports.getFeedbackById = async(req, res) => {
+    try {
+        const feedbackId = req.params.id;
+        const feedback = await Feedback.findById(feedbackId);
+
+        if (!feedback) {
+            return res.status(404).json({ error: 'Feedback not found' });
+        }
+
+        res.status(200).json(feedback);
+    } catch (error) {
+        console.error('Error getting feedback by ID:', error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+};

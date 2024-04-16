@@ -1,9 +1,11 @@
 const express = require('express');
 require('dotenv').config();
+const cors = require('cors');
 require('./config/db');
 const feedbackRoutes = require('./routes/feedback.routes');
 
 const app = express();
+app.use(cors());
 const port = process.env.PORT || 3400;
 
 app.use(express.json());
