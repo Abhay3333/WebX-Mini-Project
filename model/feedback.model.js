@@ -7,22 +7,22 @@ const feedbackSchema = new mongoose.Schema({
     },
     question1: {
         type: String,
-        enum: ['Option 1', 'Option 2', 'Option 3'],
+        enum: ['1', '2', '3'],
         required: true
     },
     question2: {
         type: String,
-        enum: ['Option A', 'Option B', 'Option C'],
+        enum: ['1', '2', '3'],
         required: true
     },
     question3: {
         type: String,
-        enum: ['Choice X', 'Choice Y', 'Choice Z'],
+        enum: ['1', '2', '3'],
         required: true
     },
     question4: {
         type: String,
-        enum: ['Selection 1', 'Selection 2', 'Selection 3'],
+        enum: ['1', '2', '3'],
         required: true
     },
     additionalFeedback: {
